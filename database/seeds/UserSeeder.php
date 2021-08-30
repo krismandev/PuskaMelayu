@@ -13,8 +13,9 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Admin',
-            'email' => 'sdgscenter@uinjambi.ac.id',
+            'email' => 'puskamelayu@uinjambi.ac.id',
             'password'=> bcrypt('admin123456'),
+            'role'=>1
         ]);
     }
 }

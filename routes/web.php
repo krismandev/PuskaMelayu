@@ -353,9 +353,6 @@ Route::group(['middleware'=>'auth','prefix' => 'admin'],function(){
         Route::get('/delete/{id}','Dashboard\TimController@deleteTim')->name('deleteTim');
     });
 
-
-
-
     Route::patch('/password','Dashboard\UserController@updatePassword')->name('updatePassword');
     Route::get('/logout','Dashboard\UserController@logout')->name('logout');
 });
