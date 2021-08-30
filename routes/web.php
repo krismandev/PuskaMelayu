@@ -76,7 +76,7 @@ Route::get('/our-research/{id}','ResearchController@detailResearch')->name('deta
 
 
 // ----------------------------------------------------------------------------------------------------
-Route::group(['middleware'=>'auth','prefix' => 'admin'],function(){
+Route::group(['middleware'=>['auth','checkRole:1,2'],'prefix' => 'admin'],function(){
     Route::get('/','Dashboard\HomeController@index')->name('dashboard');
 
     Route::group(['prefix' => 'berita'],function(){
@@ -150,11 +150,6 @@ Route::group(['middleware'=>'auth','prefix' => 'admin'],function(){
         Route::get('/','Dashboard\MitraController@getMitra')->name('getMitra');
         Route::post('/','Dashboard\MitraController@postMitra')->name('postMitra');
         Route::get('/delete/{id}','Dashboard\MitraController@deleteMitra')->name('deleteMitra');
-    });
-
-    Route::group(['prefix' => 'users'],function(){
-        Route::get('/','Dashboard\UserController@getUsers')->name('getUsers');
-        Route::post('/','Dashboard\UserController@postUser')->name('postUser');
     });
 
     Route::group(['prefix' => 'profile'],function(){
@@ -355,4 +350,11 @@ Route::group(['middleware'=>'auth','prefix' => 'admin'],function(){
 
     Route::patch('/password','Dashboard\UserController@updatePassword')->name('updatePassword');
     Route::get('/logout','Dashboard\UserController@logout')->name('logout');
+});
+
+Route::group(['middleware'=>['auth','checkRole:1'],'prefix' => 'admin'],function(){
+    Route::group(['prefix' => 'users'],function(){
+        Route::get('/','Dashboard\UserController@getUsers')->name('getUsers');
+        Route::post('/','Dashboard\UserController@postUser')->name('postUser');
+    });
 });
