@@ -15,7 +15,7 @@
         "org_heigl/ghostscript": "^2.3",
         "phpmailer/phpmailer": "^6.4",
         "realrashid/sweet-alert": "^3.2",
-        "spatie/pdf-to-image": "^2.1"
+        "spatie/pdf-to-image": "2.1"
     },
     "require-dev": {
         "facade/ignition": "^1.16.4",
