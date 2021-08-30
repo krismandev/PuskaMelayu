@@ -86,7 +86,7 @@ $banners = Banner::orderBy('created_at','desc')->get();
                                 <div class="overlay"><a href="#" class="date">{{date('d M Y',strtotime($berita->created_at))}}</a></div>
                             </div> <!-- /.image-box -->
                             <div class="post-meta">
-                                <h5 class="title"><a href="{{route('showBerita',['id'=>$berita->id,'slug'=>$berita->slug])}}">{!!Str::limit($berita->konten,150)!!}</a></h5>
+                                <h5 class="title"><a href="{{route('showBerita',['id'=>$berita->id,'slug'=>$berita->slug])}}">{!!Str::limit($berita->judul,150)!!}</a></h5>
                                 <a href="{{route('showBerita',['id'=>$berita->id,'slug'=>$berita->slug])}}" class="read-more">Baca selengkapnya...</a>
                             </div> <!-- /.post-meta -->
                         </div> <!-- /.single-blog -->
