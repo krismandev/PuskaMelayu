@@ -50,9 +50,9 @@
             <!-- ===================== Blog Sidebar ==================== -->
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 col-12 blog-sidebar">
                 <div class="sidebar-container sidebar-search">
-                    <form action="#">
-                        <input type="text" placeholder="Cari...">
-                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <form action="{{route('berita')}}" method="get">
+                        <input type="text" name="search" placeholder="Cari...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>
                 </div> <!-- /.sidebar-search -->
                 <div class="sidebar-container sidebar-recent-post">
