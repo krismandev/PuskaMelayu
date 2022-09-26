@@ -15,7 +15,7 @@
 <div class="blog-grid section-spacing">
     <div class="container clearfix">
         <div class="theme-title-one">
-            <h2>Profil Pusat Kajian SDGs UIN Jambi</h2>
+            <h2>Pusat Kajian Melayu, Kultur dan Peradaban UIN STS Jambi</h2>
         </div>
         @if($profil != null)
         <div class="container">
